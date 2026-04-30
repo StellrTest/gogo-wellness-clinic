@@ -684,7 +684,9 @@ address { font-style: normal; }
 .testimonial-card__treatment { font-size: 0.8125rem; color: var(--color-primary); font-weight: 500; }
 
 /* ============================================
-   FAQ
+   FAQ — animated accordion
+   Height + opacity driven by main.js; CSS
+   only handles decoration and icon rotation.
    ============================================ */
 .faq { background: var(--color-muted); }
 .faq__inner {
@@ -694,7 +696,12 @@ address { font-style: normal; }
   align-items: start;
 }
 .faq__list { display: flex; flex-direction: column; gap: 0; }
-.faq__item { border-bottom: 1px solid var(--color-border); }
+.faq__item {
+  border-bottom: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  transition: background 200ms ease;
+}
+.faq__item:hover { background: rgba(196,131,106,0.04); }
 .faq__q {
   display: flex;
   align-items: center;
@@ -704,21 +711,33 @@ address { font-style: normal; }
   font-size: 1rem;
   font-weight: 600;
   color: var(--color-text);
-  padding: 1.25rem 0;
+  padding: 1.375rem 0.5rem 1.375rem 0;
   gap: 1rem;
-  transition: color var(--transition-fast);
+  transition: color 200ms ease;
 }
 .faq__q:hover { color: var(--color-primary); }
 .faq__q[aria-expanded="true"] { color: var(--color-primary); }
 .faq__icon {
   flex-shrink: 0;
-  transition: transform var(--transition-base);
+  color: var(--color-primary);
+  /* Smooth spring-like rotation */
+  transition: transform 380ms cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 200ms ease;
+  opacity: 0.7;
 }
-.faq__q[aria-expanded="true"] .faq__icon { transform: rotate(180deg); }
-.faq__a {
+.faq__q:hover .faq__icon { opacity: 1; }
+.faq__q[aria-expanded="true"] .faq__icon {
+  transform: rotate(180deg);
+  opacity: 1;
+}
+/* JS controls height/opacity on .faq__a; we only set padding here */
+.faq__a { padding-left: 0; padding-right: 0.5rem; }
+.faq__a p {
+  font-size: 0.9375rem;
+  color: var(--color-text-mid);
+  line-height: 1.75;
   padding-bottom: 1.25rem;
 }
-.faq__a p { font-size: 0.9375rem; color: var(--color-text-mid); line-height: 1.7; }
 
 /* ============================================
    CONTACT
@@ -890,20 +909,101 @@ address { font-style: normal; }
 .footer__bottom p { font-size: 0.8125rem; color: rgba(255,255,255,0.4); }
 
 /* ============================================
-   ANIMATIONS — Entry
+   MICRO-INTERACTIONS & POLISH
+   ============================================ */
+
+/* Buttons — CSS active-press (JS adds scale too; belt + braces) */
+.btn {
+  transition: transform 180ms cubic-bezier(0.34,1.56,0.64,1),
+              box-shadow 220ms ease,
+              background 200ms ease,
+              color 200ms ease;
+}
+.btn:active { transform: scale(0.96) !important; }
+.btn--primary:hover { filter: brightness(1.06); }
+
+/* Nav links — sliding underline on hover */
+.nav__links a {
+  position: relative;
+}
+.nav__links a::after {
+  content: '';
+  position: absolute;
+  bottom: 4px; left: 50%;
+  width: 0; height: 1.5px;
+  background: var(--color-primary);
+  border-radius: 2px;
+  transition: width 220ms cubic-bezier(0.4,0,0.2,1),
+              left 220ms cubic-bezier(0.4,0,0.2,1);
+}
+.nav__links a:hover::after {
+  width: 70%;
+  left: 15%;
+}
+
+/* Service cards — richer shadow on hover */
+.service-card {
+  transition: transform 300ms cubic-bezier(0.34,1.2,0.64,1),
+              box-shadow 300ms ease;
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 56px rgba(42,30,24,0.13),
+              0 0 40px rgba(196,131,106,0.14);
+}
+
+/* Testimonial cards */
+.testimonial-card {
+  transition: transform 300ms cubic-bezier(0.34,1.2,0.64,1),
+              box-shadow 300ms ease;
+}
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Contact detail rows */
+.contact__detail-item {
+  transition: transform 220ms cubic-bezier(0.4,0,0.2,1),
+              background 180ms ease;
+}
+.contact__detail-item:hover { transform: translateX(5px); }
+
+/* Social icon buttons */
+.contact__social-link,
+.footer__social a {
+  transition: transform 220ms cubic-bezier(0.34,1.56,0.64,1),
+              color 160ms ease,
+              background 160ms ease;
+}
+.contact__social-link:hover,
+.footer__social a:hover { transform: translateY(-3px) scale(1.1); }
+
+/* Form inputs — smooth focus ring expansion */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  transition: border-color 200ms ease,
+              box-shadow 250ms cubic-bezier(0.4,0,0.2,1),
+              background 200ms ease;
+}
+
+/* ============================================
+   ANIMATIONS — Scroll Entry
    ============================================ */
 .reveal {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(28px);
+  transition: opacity 0.55s cubic-bezier(0.4,0,0.2,1),
+              transform 0.55s cubic-bezier(0.34,1.1,0.64,1);
 }
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-1 { transition-delay: 0.08s; }
+.reveal-delay-2 { transition-delay: 0.18s; }
+.reveal-delay-3 { transition-delay: 0.28s; }
 
 /* ============================================
    RESPONSIVE
