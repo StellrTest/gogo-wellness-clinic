@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoGo Wellness Clinic | Elevating Your Authentic Radiance</title>
+  <meta name="description" content="Premier med spa in Thornhill offering cosmetic injectables, microneedling, PRP, dermal fillers, IV therapy and threads. Free consultations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo" aria-label="GoGo Wellness Clinic home">
+        <img src="https://gogowellnessclinic.com/wp-content/uploads/2025/03/Gogo-Wellness-Clinic-Logo-Toronto-Richmond-Hill.png"
+             alt="GoGo Wellness Clinic" height="48" />
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="#about">About</a></li>
+        <li class="nav__dropdown">
+          <a href="#services" aria-haspopup="true">Treatments</a>
+          <ul class="nav__submenu" role="list">
+            <li><a href="#services">Cosmetic Injectables</a></li>
+            <li><a href="#services">Microneedling</a></li>
+            <li><a href="#services">PRP Injections</a></li>
+            <li><a href="#services">Dermal Fillers</a></li>
+            <li><a href="#services">IV Therapy</a></li>
+            <li><a href="#services">Threads</a></li>
+          </ul>
+        </li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn--sm btn--primary">Book Free Consult</a>
+      <button class="nav__burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <ul role="list">
+      <li><a href="#about" class="mobile-menu__link">About</a></li>
+      <li><a href="#services" class="mobile-menu__link">Treatments</a></li>
+      <li><a href="#faq" class="mobile-menu__link">FAQ</a></li>
+      <li><a href="#contact" class="mobile-menu__link">Contact</a></li>
+      <li><a href="#contact" class="btn btn--primary" style="display:block;text-align:center;margin-top:1rem;">Book Free Consult</a></li>
+    </ul>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
+      <!-- Full-bleed background image — face on left, text lives over the tan right side -->
+      <div class="hero__backdrop" aria-hidden="true">
+        <img src="https://gogowellnessclinic.com/wp-content/uploads/2024/09/Front-12.png"
+             alt="" loading="eager" fetchpriority="high" />
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <!-- Content anchored to the right (over the tan portion of the image) -->
+      <div class="container hero__container">
+        <div class="hero__content">
+          <span class="hero__eyebrow">Premier Med Spa · Thornhill, ON</span>
+          <h1 class="hero__title">Elevating Your<br /><em>Authentic Radiance</em></h1>
+          <p class="hero__subtitle">Non-surgical, minimally invasive aesthetic treatments tailored to you — delivered by an experienced cosmetic nurse practitioner.</p>
+          <div class="hero__ctas">
+            <a href="#contact" class="btn btn--primary btn--lg">Book a Free Consultation</a>
+            <a href="#services" class="btn btn--ghost btn--lg">Explore Treatments</a>
+          </div>
+          <div class="hero__trust">
+            <span class="hero__trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Board Certified
+            </span>
+            <span class="hero__trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Free Consultations
+            </span>
+            <span class="hero__trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              Personalized Care
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <section class="stats" aria-label="Clinic highlights">
+      <div class="container">
+        <div class="stats__grid">
+          <div class="stats__item">
+            <span class="stats__num">Botox</span>
+            <span class="stats__label">from $11/unit</span>
+          </div>
+          <div class="stats__divider" aria-hidden="true"></div>
+          <div class="stats__item">
+            <span class="stats__num">7+</span>
+            <span class="stats__label">Treatment Types</span>
+          </div>
+          <div class="stats__divider" aria-hidden="true"></div>
+          <div class="stats__item">
+            <span class="stats__num">100%</span>
+            <span class="stats__label">Personalized</span>
+          </div>
+          <div class="stats__divider" aria-hidden="true"></div>
+          <div class="stats__item">
+            <span class="stats__num">Free</span>
+            <span class="stats__label">Consultations</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about section" id="about" aria-label="About GoGo Wellness Clinic">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__images" aria-hidden="true">
+            <div class="about__img-main glass-card">
+              <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=500&q=80"
+                   alt="GoGo Wellness Clinic interior" loading="lazy" width="400" height="500" />
+            </div>
+            <div class="about__img-accent glass-card">
+              <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=300&q=80"
+                   alt="Cosmetic treatment" loading="lazy" width="260" height="320" />
+            </div>
+            <div class="about__cred-badge glass-card">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>Canadian Board<br/>Certified</span>
+            </div>
+          </div>
+          <div class="about__text">
+            <span class="section-eyebrow">About Us</span>
+            <h2 class="section-title">Where Science Meets <em>Artistry</em></h2>
+            <p class="about__lead">GoGo Wellness Clinic is a premier aesthetic practice dedicated to serving clients across all skin tones and types with the highest standard of care.</p>
+            <p>Our philosophy is rooted in ongoing education and the continuous integration of the latest advancements in aesthetic medicine — delivering innovative, effective, and safe treatments tailored to your unique needs.</p>
+            <p>We believe in a personalized, one-on-one approach. Every face is different, every goal is unique. We take the time to understand you before recommending anything.</p>
+            <div class="about__creds">
+              <div class="about__cred-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                International Institute of Aesthetic Medicine
+              </div>
+              <div class="about__cred-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Canadian Board of Aesthetic Medicine
+              </div>
+              <div class="about__cred-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Canadian Nurses Association (CNA)
+              </div>
+              <div class="about__cred-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                American Medical Association (AMA)
+              </div>
+            </div>
+            <a href="#contact" class="btn btn--primary">Schedule Your Consultation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services section" id="services" aria-label="Treatments">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Treatments</span>
+          <h2 class="section-title">Curated for <em>You</em></h2>
+          <p class="section-subtitle">Every treatment is non-surgical, minimally invasive, and performed with precision by our expert nurse practitioner.</p>
+        </div>
+        <div class="services__grid">
+
+          <article class="service-card glass-card" tabindex="0">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            </div>
+            <h3>Cosmetic Injectables</h3>
+            <p>Botox®, Dysport®, Xeomin® and Nuceiva® to smooth fine lines, prevent wrinkles, and refresh your appearance. Results in 3–5 days, lasting 3–6 months.</p>
+            <ul class="service-card__areas" aria-label="Treatment areas">
+              <li>Forehead &amp; Frown Lines</li>
+              <li>Crow's Feet</li>
+              <li>Brow Lift</li>
+              <li>TMJ / Jaw Slimming</li>
+              <li>Neck Bands</li>
+            </ul>
+            <div class="service-card__price">From <strong>$10/unit</strong></div>
+          </article>
+
+          <article class="service-card glass-card" tabindex="0">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+            </div>
+            <h3>Dermal Fillers &amp; Contouring</h3>
+            <p>Restore lost volume, define your contours, and rejuvenate with premium fillers — Restylane®, Belotero®, Revanesse®, Radiesse®, and Sculptra®.</p>
+            <ul class="service-card__areas">
+              <li>Lip Augmentation</li>
+              <li>Cheek Contouring</li>
+              <li>Nasolabial Folds</li>
+              <li>Tear Troughs</li>
+              <li>Jawline Definition</li>
+            </ul>
+            <div class="service-card__price">Consultation Required</div>
+          </article>
+
+          <article class="service-card glass-card" tabindex="0">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22V12M12 12C12 6 6 2 6 2s1 6 6 10zM12 12c0-6 6-10 6-10s-1 6-6 10z"/></svg>
+            </div>
+            <h3>Microneedling</h3>
+            <p>Advanced skin renewal using SkinPen® and SYLFIRM X platforms to stimulate collagen, refine texture, reduce pores, and improve overall skin tone.</p>
+            <ul class="service-card__areas">
+              <li>Skin Texture &amp; Tone</li>
+              <li>Acne Scars</li>
+              <li>Fine Lines</li>
+              <li>Pore Refinement</li>
+              <li>Hyperpigmentation</li>
+            </ul>
+            <div class="service-card__price">Consultation Required</div>
+          </article>
+
+          <article class="service-card glass-card" tabindex="0">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="12" rx="10" ry="4"/><path d="M2 12c0 4.42 4.48 8 10 8s10-3.58 10-8"/><path d="M12 2v20"/></svg>
+            </div>
+            <h3>PRP Therapy</h3>
+            <p>Harness your own body's healing power. Platelet-Rich Plasma injections promote natural collagen production and skin regeneration for lasting results.</p>
+            <ul class="service-card__areas">
+              <li>Skin Rejuvenation</li>
+              <li>Hair Restoration</li>
+              <li>Combined with Microneedling</li>
+              <li>Natural Volumization</li>
+            </ul>
+            <div class="service-card__price">Consultation Required</div>
+          </article>
+
+          <article class="service-card glass-card" tabindex="0">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h3>IV Therapy &amp; Hydration</h3>
+            <p>Replenish, revitalize, and restore from the inside out. Custom vitamin infusions delivered directly into the bloodstream for maximum absorption and immediate results.</p>
+            <ul class="service-card__areas">
+              <li>Energy Boost</li>
+              <li>Immune Support</li>
+              <li>Skin Glow</li>
+              <li>Hangover Recovery</li>
+              <li>Athletic Performance</li>
+            </ul>
+            <div class="service-card__price">Consultation Required</div>
+          </article>
+
+          <article class="service-card glass-card" tabindex="0">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <h3>Thread Lifts</h3>
+            <p>A minimally invasive alternative to surgical lifting. Dissolvable threads are used to lift and tighten skin, stimulating collagen for a natural, refreshed look.</p>
+            <ul class="service-card__areas">
+              <li>Brow Lift</li>
+              <li>Mid-face Lift</li>
+              <li>Jawline Tightening</li>
+              <li>Neck Lifting</li>
+            </ul>
+            <div class="service-card__price">Consultation Required</div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PHILOSOPHY STRIP -->
+    <section class="philosophy" aria-label="Our philosophy">
+      <div class="philosophy__inner">
+        <blockquote>
+          <p>"We believe every face tells a story. Our role is simply to help you tell it beautifully — naturally, safely, and authentically."</p>
+          <cite>GoGo Wellness Clinic</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials section" id="testimonials" aria-label="Client testimonials">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Testimonials</span>
+          <h2 class="section-title">Real Results, <em>Real People</em></h2>
+        </div>
+        <div class="testimonials__grid">
+
+          <blockquote class="testimonial-card glass-card">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p>"My skin has completely transformed. The results are so natural-looking — everyone comments that I look refreshed but can't quite put their finger on why. Exactly what I wanted."</p>
+            <footer>
+              <span class="testimonial-card__name">Sarah L.</span>
+              <span class="testimonial-card__treatment">Cosmetic Injectables</span>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card glass-card">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p>"The IV therapy was a game-changer. I felt the energy boost almost immediately and it lasted for days. The clinic is spotless, professional, and the staff make you feel completely at ease."</p>
+            <footer>
+              <span class="testimonial-card__name">Nick H.</span>
+              <span class="testimonial-card__treatment">IV Therapy</span>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card glass-card">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p>"I was nervous about fillers but the consultation put me completely at ease. The volume restoration looks incredibly natural — I look like myself, just better rested and more radiant."</p>
+            <footer>
+              <span class="testimonial-card__name">Sadaf M.</span>
+              <span class="testimonial-card__treatment">Dermal Fillers</span>
+            </footer>
+          </blockquote>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq section" id="faq" aria-label="Frequently asked questions">
+      <div class="container">
+        <div class="faq__inner">
+          <div class="section-header" style="text-align:left; max-width:none;">
+            <span class="section-eyebrow">FAQ</span>
+            <h2 class="section-title">Common <em>Questions</em></h2>
+          </div>
+          <div class="faq__list" role="list">
+
+            <div class="faq__item" role="listitem">
+              <button class="faq__q" aria-expanded="false">
+                Is Botox safe?
+                <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq__a" hidden>
+                <p>Yes. Botox has been FDA-approved for cosmetic use for over 20 years and has an extensive safety record. When administered by a qualified practitioner, it is one of the most studied and trusted aesthetic treatments available. We follow strict protocols and use only Health Canada-approved products.</p>
+              </div>
+            </div>
+
+            <div class="faq__item" role="listitem">
+              <button class="faq__q" aria-expanded="false">
+                How long does Botox last?
+                <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq__a" hidden>
+                <p>Results typically appear within 3–5 days and reach their peak around two weeks after treatment. Effects generally last 3–6 months depending on the individual, treatment area, and product used. Regular maintenance treatments can extend and improve results over time.</p>
+              </div>
+            </div>
+
+            <div class="faq__item" role="listitem">
+              <button class="faq__q" aria-expanded="false">
+                How much does Botox cost?
+                <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq__a" hidden>
+                <p>Botox is priced at $11 per unit and Dysport at $10 per unit. The number of units required varies by individual and treatment area. A typical forehead treatment may use 15–30 units. We recommend a free consultation to get an accurate estimate tailored to your goals.</p>
+              </div>
+            </div>
+
+            <div class="faq__item" role="listitem">
+              <button class="faq__q" aria-expanded="false">
+                How many units will I need?
+                <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq__a" hidden>
+                <p>We follow a "start low, go slow" philosophy. Every face is unique — muscle strength, facial anatomy, and personal goals all factor into the recommended dosage. We start conservatively and adjust at your follow-up to ensure natural-looking results you'll love.</p>
+              </div>
+            </div>
+
+            <div class="faq__item" role="listitem">
+              <button class="faq__q" aria-expanded="false">
+                Does Botox hurt?
+                <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq__a" hidden>
+                <p>Most clients describe the sensation as a very brief, mild pinch. The needles used are extremely fine and the procedure takes only a few minutes. Topical numbing cream is available on request. Many clients find it much more comfortable than they expected.</p>
+              </div>
+            </div>
+
+            <div class="faq__item" role="listitem">
+              <button class="faq__q" aria-expanded="false">
+                Do you offer consultations?
+                <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq__a" hidden>
+                <p>Yes — all consultations are completely free. We strongly encourage a consultation before any treatment. This is your time to ask questions, share your goals, and for us to assess your needs and create a personalized treatment plan. There is never any pressure to proceed.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / BOOKING -->
+    <section class="contact section" id="contact" aria-label="Book a consultation">
+      <div class="container">
+        <div class="contact__grid">
+          <div class="contact__info">
+            <span class="section-eyebrow">Get in Touch</span>
+            <h2 class="section-title">Ready to Begin Your <em>Journey?</em></h2>
+            <p>Book your free consultation today. Whether you have questions or you're ready to start, we're here for you every step of the way.</p>
+
+            <div class="contact__details">
+              <a href="tel:18774404646" class="contact__detail-item">
+                <div class="contact__detail-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.95-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div>
+                  <span class="contact__detail-label">Phone</span>
+                  <span class="contact__detail-value">1-877-440-4646</span>
+                </div>
+              </a>
+
+              <a href="mailto:info@gogowellnessclinic.com" class="contact__detail-item">
+                <div class="contact__detail-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <span class="contact__detail-label">Email</span>
+                  <span class="contact__detail-value">info@gogowellnessclinic.com</span>
+                </div>
+              </a>
+
+              <div class="contact__detail-item">
+                <div class="contact__detail-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <span class="contact__detail-label">Location</span>
+                  <span class="contact__detail-value">200 – 8220 Bayview Ave.<br />Thornhill, ON L3T 2S2</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact__social">
+              <span>Follow us:</span>
+              <a href="#" aria-label="Instagram" class="contact__social-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="#" aria-label="Facebook" class="contact__social-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="#" aria-label="TikTok" class="contact__social-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <form class="contact__form glass-card" id="contactForm" novalidate aria-label="Book consultation form">
+            <h3>Book Your Free Consultation</h3>
+
+            <div class="form-group">
+              <label for="name">Full Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" required autocomplete="name" placeholder="Jane Smith" />
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address <span aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="jane@example.com" />
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(416) 555-0100" />
+            </div>
+
+            <div class="form-group">
+              <label for="treatment">Treatment of Interest</label>
+              <select id="treatment" name="treatment">
+                <option value="">Select a treatment…</option>
+                <option value="injectables">Cosmetic Injectables (Botox/Dysport)</option>
+                <option value="fillers">Dermal Fillers &amp; Contouring</option>
+                <option value="microneedling">Microneedling</option>
+                <option value="prp">PRP Therapy</option>
+                <option value="iv">IV Therapy &amp; Hydration</option>
+                <option value="threads">Thread Lifts</option>
+                <option value="unsure">Not Sure / General Consultation</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="3" placeholder="Tell us about your goals or any questions you have…"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+              <span class="btn__text">Send Message</span>
+              <span class="btn__loading" aria-hidden="true" hidden>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="spin"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" opacity=".25"/><path d="M21 12a9 9 0 0 1-9 9"/></svg>
+                Sending…
+              </span>
+            </button>
+
+            <div class="form-success" id="formSuccess" hidden role="alert">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <p>Thank you! We'll be in touch within 24 hours to confirm your consultation.</p>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="https://gogowellnessclinic.com/wp-content/uploads/2025/03/Gog-Wellness-Clinic-Footer-Transparent-Logo.png"
+               alt="GoGo Wellness Clinic" height="52" loading="lazy" />
+          <p>Elevating Your Authentic Radiance.<br />Premier med spa in Thornhill, Ontario.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" aria-label="TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4>Treatments</h4>
+          <ul role="list">
+            <li><a href="#services">Cosmetic Injectables</a></li>
+            <li><a href="#services">Dermal Fillers</a></li>
+            <li><a href="#services">Microneedling</a></li>
+            <li><a href="#services">PRP Therapy</a></li>
+            <li><a href="#services">IV Therapy</a></li>
+            <li><a href="#services">Thread Lifts</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Clinic</h4>
+          <ul role="list">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Book Consultation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <address style="font-style:normal;">
+            <p><a href="tel:18774404646">1-877-440-4646</a></p>
+            <p><a href="mailto:info@gogowellnessclinic.com">info@gogowellnessclinic.com</a></p>
+            <p>200 – 8220 Bayview Ave.<br />Thornhill, ON L3T 2S2</p>
+          </address>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2025 GoGo Wellness Clinic. All rights reserved.</p>
+        <p>Serving Thornhill, Richmond Hill, Markham &amp; Toronto, Ontario</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
