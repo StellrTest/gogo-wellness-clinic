@@ -220,10 +220,10 @@ form.addEventListener('submit', async (e) => {
   function showPopup() {
     if (isDismissed() || popup.classList.contains('active')) return;
     popup.hidden = false;
-    requestAnimationFrame(() => {
+    requestAnimationFrame(() => requestAnimationFrame(() => {
       backdrop.classList.add('active');
       popup.classList.add('active');
-    });
+    }));
     popup.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
     popup.querySelector('input')?.focus();
