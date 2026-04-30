@@ -202,6 +202,82 @@ form.addEventListener('submit', async (e) => {
   form.reset();
 });
 
+// ─── Popup — exit intent + 8s timer, 30-day localStorage suppression ─────
+(function () {
+  const STORAGE_KEY = 'gogo_popup_dismissed';
+  const COOLDOWN_DAYS = 30;
+
+  function isDismissed() {
+    const ts = localStorage.getItem(STORAGE_KEY);
+    if (!ts) return false;
+    return Date.now() - parseInt(ts) < COOLDOWN_DAYS * 864e5;
+  }
+  function dismiss() { localStorage.setItem(STORAGE_KEY, Date.now()); hidePopup(); }
+
+  const backdrop = document.getElementById('popupBackdrop');
+  const popup    = document.getElementById('popup');
+
+  function showPopup() {
+    if (isDismissed() || popup.classList.contains('active')) return;
+    popup.hidden = false;
+    requestAnimationFrame(() => {
+      backdrop.classList.add('active');
+      popup.classList.add('active');
+    });
+    popup.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    popup.querySelector('input')?.focus();
+  }
+
+  function hidePopup() {
+    backdrop.classList.remove('active');
+    popup.classList.remove('active');
+    document.body.style.overflow = '';
+    popup.setAttribute('aria-hidden', 'true');
+    setTimeout(() => { popup.hidden = true; }, 380);
+  }
+
+  if (!isDismissed()) {
+    // Timer trigger: 8 seconds
+    const timer = setTimeout(showPopup, 8000);
+
+    // Exit intent: cursor leaves viewport upward
+    document.addEventListener('mouseleave', (e) => {
+      if (e.clientY < 5) { clearTimeout(timer); showPopup(); }
+    }, { once: true });
+  }
+
+  document.getElementById('popupClose').addEventListener('click', dismiss);
+  document.getElementById('popupDismiss').addEventListener('click', dismiss);
+  backdrop.addEventListener('click', dismiss);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') dismiss(); });
+
+  // Popup form submit
+  const popupForm    = document.getElementById('popupForm');
+  const popupSuccess = document.getElementById('popupSuccess');
+  popupForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const nameEl  = popupForm.querySelector('#p-name');
+    const emailEl = popupForm.querySelector('#p-email');
+    let ok = true;
+    if (!nameEl.value.trim())  { nameEl.classList.add('error');  ok = false; }
+    if (!emailEl.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value)) {
+      emailEl.classList.add('error'); ok = false;
+    }
+    if (!ok) return;
+    const btn = popupForm.querySelector('.popup__submit');
+    btn.querySelector('.btn__text').hidden = true;
+    btn.querySelector('.btn__loading').hidden = false;
+    btn.disabled = true;
+    await new Promise(r => setTimeout(r, 1400));
+    btn.hidden = true;
+    popupSuccess.hidden = false;
+    popupForm.querySelector('.popup__dismiss').hidden = true;
+    localStorage.setItem(STORAGE_KEY, Date.now());
+    setTimeout(hidePopup, 3000);
+  });
+})();
+
 // ─── Smooth scroll with nav offset ────────────────────────────────────────
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', e => {
